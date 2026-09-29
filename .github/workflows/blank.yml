@@ -1,0 +1,14 @@
+name: Primeiro action
+
+on:
+  push:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar codigo
+       user: actions/checkout@v4
+
+      - name: Executar teste
+        run: echo "Hello world"
