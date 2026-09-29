@@ -3,8 +3,6 @@ name: Primeiro action
 on:
   push:
 
-  workflow_dispatch:
-
 jobs:
   teste:
     runs-on: ubuntu-latest
@@ -15,11 +13,4 @@ jobs:
 
       - name: Executar teste
         run: echo "Hello world"
-
-      - name: Resumo
-        run: |
-          echo "## ✅ Workflow executado" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- Código baixado com sucesso" >> $GITHUB_STEP_SUMMARY
-          echo "- Teste executado: Hello world" >> $GITHUB_STEP_SUMMARY
-          echo "- Sistema utilizado: Ubuntu" >> $GITHUB_STEP_SUMMARY
+        
